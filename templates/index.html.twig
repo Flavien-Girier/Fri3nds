@@ -1,0 +1,72 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+
+    <header id="header-area" id="home">
+        <div class="navigation text-center">
+            <ul>
+                <li><a href="#about">A PROPOS</a></li>
+                <li><a class="logo" href="{{ path('login') }}">FRI3NDS <br> OF GENAS</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <section class="sec1-area" id="about">
+        <div class="container text-center">
+            <h4>A PROPOS</h4>
+            <h6>Le site des amis de Genas</h6>
+
+            <div class="row">
+                <div class="sec1-content col-md-4">
+                    Faceboo, WhatApp, Instagram et tutti quanti c'est bien. Mais avoir son propre site communautaire, c'est mieux non ?
+                </div>
+                <div class="sec1-content-img col-md-4">
+                    <img src="{{ asset('images/BG4.jpg') }}" width="200" height="200" alt="friend_picture" class="rounded-circle">
+                </div>
+                <div class="sec1-content col-md-4">
+C'est ici que nous pouvons partager nos évènements, nos contacts et toutes informations. A l'abris de l'espionnage des méchants.                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="sec3-area" id="contact">
+        <div class="container">
+
+            <div class="sec3-head text-center">
+                <h4>CONTACT</h4>
+            </div>
+
+            <div class="text-center">
+                <p>Si vous avez des questions sur ce site ou si tu veux simplement nous rejoindre, c'est par ici</p>
+            </div>
+
+            <form role="form" class="contact-form row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="c-name" placeholder="Nom">
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <input type="email" class="form-control" id="c-email" placeholder="E-mail">
+                    </div>
+                </div>
+
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <textarea class="form-control textarea" rows="5" id="c-message" placeholder="Message"></textarea>
+                    </div>
+                </div>
+
+                <div class="col-md-12 text-center">
+                    <button type="submit" class="btn btn-send">SEND</button>
+                </div>
+
+            </form>
+
+        </div>
+    </section>
+
+{% endblock %}

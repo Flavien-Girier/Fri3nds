@@ -1,20 +1,18 @@
 <?php
 /**
  * Created by PhpStorm.
- * User: wilder
+ * user: wilder
  * Date: 16/07/18
  * Time: 11:29
  */
 
 namespace App\Controller;
 
-
-
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Response;
 use Twig\Environment;
 
-class PageController
+class FirstPageController
 {
     /**
      * @param Environment $twig
@@ -25,6 +23,6 @@ class PageController
      * @Route("/")
      */
     public function index(Environment $twig) {
-        return new Response($twig->render('welcome.html.twig'));
+        return new Response($twig->render('index.html.twig'));
     }
 }
